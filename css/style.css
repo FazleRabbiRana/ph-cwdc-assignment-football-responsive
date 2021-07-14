@@ -2,8 +2,10 @@
  * General styles
 ------------------------- */
 :root {
-	--title-color: #18191F;
+	--body-text-color: #6C6C6C;
+	--title-text-color: #18191F;
 	--button-color: #E02C6D;
+	--header-bg-color: #2D25A0;
 }
 
 * {
@@ -18,7 +20,7 @@ body {
 	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
 	line-height: 1.625;
-	color: #6C6C6C;
+	color: var(--body-text-color);
 	background-color: #fff;
 }
 
@@ -36,10 +38,135 @@ a {
 	text-decoration: none;
 	font-weight: 500;
 	color: inherit;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+button {
+	cursor: pointer;
 	transition: all 0.3s ease;
 }
 
 img {
 	width: 100%;
 	max-width: 100%;
+}
+
+ul {
+	list-style: none;
+}
+
+main > section {
+	padding: 70px 0;
+}
+
+.container {
+	width: 100%;
+	max-width: 1160px;
+	margin: 0 auto;
+	padding: 0 15px; 
+}
+
+.flex-box {
+	display: flex;
+}
+
+.flex-center-all {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.half-width {
+	width: 50%;
+}
+
+.box-button {
+	width: auto;
+	height: 44px;
+	padding: 0 24px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-transform: capitalize;
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff;
+	background-color: var(--button-color);
+	border: 0;
+}
+
+.box-button:not(.login) > i {
+	margin-left: 8px;
+	transition: transform 0.3s linear;
+}
+
+.box-button:not(.login):hover > i {
+	transform: translateX(7px);
+}
+
+.box-button.login:hover {
+	background-color: #fff;
+	color: var(--button-color);
+}
+
+.box-button.login > i {
+	margin-right: 10px;
+}
+
+/* -------------------------
+ * HEADER SECTION
+------------------------- */
+.header-section {
+	padding: 36px 0;
+	background: var(--header-bg-color);
+	color: #fff;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/**
+* Menu
+*/
+.menu-list li + li {
+	margin-left: 36px;
+}
+
+.menu-list li a:hover {
+	color: var(--button-color);
+}
+
+/**
+* Mobile menu button
+*/
+#mobile-menu-btn {
+	display: inline-block;
+	padding: 6px 3px;
+	font-size: 18px;
+	color: #fff;
+	background-color: transparent;
+	border: 0;
+	display: none;
+}
+
+#mobile-menu-btn:hover {
+	color: var(--button-color);
+}
+
+/**
+* Banner area
+*/
+.banner-area {
+	padding: 50px 0;
+}
+
+.banner-area h1 {
+	font-size: 64px;
+	color: #fff;
+	margin-bottom: 27px;
 }
