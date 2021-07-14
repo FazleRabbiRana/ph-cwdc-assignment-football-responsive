@@ -194,11 +194,104 @@ main > section {
 
 
 /* -------------------------
+ * SUBSCRIPTION SECTION
+------------------------- */
+.subscription-section {
+	background: var(--title-text-color);
+	position: relative;
+	padding: 50px 0;
+	z-index: 1;
+}
+
+.subscription-img {
+	max-width: 40%;
+	width: auto;
+	height: auto;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.subscription-texts {
+	width: 60%;
+	padding-right: 20px;
+	z-index: 2;
+}
+
+.subscription-texts p {
+	color: #fff;
+}
+
+.subscription-texts h2 {
+    color: #fff;
+    font-size: 26px;
+    text-transform: uppercase;
+	margin: 10px 0 15px;
+}
+
+.subscription-texts small {
+	display: block;
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+.subscription-form {
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.subscription-form > * {
+	height: 46px;
+	font-size: 16px;
+	line-height: 1;
+	background-color: #fff;
+	border: 1px solid var(--button-color);
+}
+
+.subscription-form input[type="email"] {
+	flex-grow: 1;
+	padding: 0 15px;
+	color: #000;
+}
+
+.subscription-form input[type="email"]:focus {
+	border-color: var(--button-color);
+	box-shadow: none;
+	outline: none;
+}
+
+.subscription-form button[type="submit"] {
+	flex: 0;
+	padding: 0 30px;
+	background-color: var(--button-color);
+	color: #fff;
+}
+
+.subscription-form button[type="submit"]:hover {
+	color: var(--button-color);
+	background-color: #fff;
+}
+
+
+
+/* -------------------------
  * FOOTER SECTION
 ------------------------- */
-.footer-section .container {
-	max-width: 480px;
+.footer-section {
+	padding: 70px 0 60px;
 	text-align: center;
+}
+
+.footer-logo {
+	max-width: 480px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.social-links {
+	margin: 20px 0;
 }
 
 .social-links li + li {
@@ -210,8 +303,8 @@ main > section {
 	height: 32px;
 	border-radius: 50%;
 	display: inline-flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
 	background-color: rgba(11, 13, 23, 0.1);
 	color: #969BAB;
 	transition: all 0.3s ease;
