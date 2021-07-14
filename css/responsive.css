@@ -1,0 +1,138 @@
+/* -------------------------
+ * Responsive style for Tablet Devices
+------------------------- */
+@media (max-width: 768px) {
+	/* Menu */
+	.menu-list li + li {
+		margin-left: 25px;
+	}
+
+	/* Players section */
+	.all-players {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	/* App section */
+	#ball-animation {
+		width: 15px;
+		bottom: 25%;
+	}
+	@keyframes ballMovement {
+		0% {
+			left: 20%;
+			bottom: 25%;
+			transform: translate(-50%, 50%) scale(1);
+		}
+		50% {
+			bottom: 50%;
+			transform: translate(-50%, 50%) scale(1.3);
+		}
+		100% {
+			left: calc(100% - 20%);
+			bottom: 25%;
+			transform: translate(-50%, 50%) scale(1);
+		}
+	}
+}
+
+
+/* -------------------------
+ * Responsive style for Mobile Devices
+------------------------- */
+@media (max-width: 576px) {
+	/* General styles */
+	main > section,
+	.footer-section {
+		padding: 50px 0;
+	}
+	.box-button.login {
+		height: 33px;
+		padding: 0 18px;
+		font-size: 12px;
+	}
+	.half-width {
+		width: 100%;
+	}
+
+	/* Menu */
+	.menu-list {
+		display: none;
+	}
+	#mobile-menu-btn {
+		display: block;
+	}
+
+	/* Banner area */
+	.banner-area {
+		flex-direction: column;
+		padding-bottom: 30px;
+	}
+	.banner-area .half-width + .half-width {
+		margin-top: 50px;
+	}
+	.banner-area h1 {
+		font-size: 36px;
+	}
+
+	/* Players section */
+	.all-players {
+		grid-template-columns: 1fr;
+		gap: 24px;
+	}
+
+	/* App section */
+	.app-section {
+		min-height: 400px;
+	}
+	.app-texts p {
+		font-size: 15px;
+	}
+	#ball-animation {
+		width: 11px;
+		left: 50%;
+		bottom: 23%;
+	}
+	#ball-animation,
+	#football {
+		animation: unset;
+	}
+
+	/* Subscription section */
+	.subscription-section > .container {
+		display: flex;
+		flex-direction: column-reverse;
+		padding: 0;
+	}
+	.subscription-texts {
+		width: 100%;
+		padding: 0 15px;
+	}
+	.subscription-form button[type="submit"] {
+		padding: 0 15px;
+	}
+	.subscription-img {
+		position: static;
+		max-width: 100%;
+		z-index: 1;
+		display: block;
+		transform: translateY(50px);
+	}
+
+	/* Footer section */
+	.footer-logo {
+		max-width: 260px;
+	}
+}
+
+
+/* -------------------------
+ * Responsive style for Extra Small Devices
+------------------------- */
+.subscription-form > * {
+	height: 38px;
+	font-size: 15px;
+}
+.subscription-form input[type="email"],
+.subscription-form button[type="submit"] {
+	padding: 0 8px;
+}
